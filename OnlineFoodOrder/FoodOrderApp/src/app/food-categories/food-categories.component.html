@@ -1,0 +1,59 @@
+
+  <div>
+    <nav class="navbar navbar-dark bg-dark expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><i>FoodCategory!!</i></a>
+      <form class="form-inline">
+   <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#9906;   Search Category">&nbsp;&nbsp;  
+   <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Signup</button>&nbsp; 
+   <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Signin</button>
+  </form>
+     </nav>
+    </div><br/>
+  <div class="hero-unit" style="background-color: #FFDAB9;">
+    <h2 style="font-family: Times New Roman;"><i>{{data.RestaurantName}} Restaurant</i></h2>
+    <div><i><h5 style="float:left">Famous For: </h5>
+      <p style="font-size: 20px;">&nbsp;{{data.RestaurantDefinition}}</p></i></div>
+      <div><i><h5 style="float:left">Location: </h5>
+        <p style="font-size: 20px;">&nbsp;{{data.RestaurantLocation}}</p></i></div>
+        <div><i><h5 style="float:left">Open Time: </h5>
+          <p style="font-size: 20px;">&nbsp;{{data.OpenTime}}</p></i></div>
+    
+ </div>
+  <body style="background-color: aquamarine;">
+ <div class="card" style="width:50%; margin-left:250px; margin-top:50px;">
+ <div class="card-body" *ngFor="let pd of result | filter:searchText">
+    
+  <div class="row">
+    <div class="column">
+      <img src="https://i.pinimg.com/originals/ce/85/68/ce8568b8d13aa3cbcd3ec519229f42e0.jpg" style="height:150px; width:200px;" />
+    </div>
+    <div class="column">
+      <h5  class="card-header" style="text-transform:capitalize;"><i><a [routerLink]="['/foodlist/', pd.FoodCategoryId]">{{pd.FoodCategoryName}}</a></i></h5><br/>
+      <p class="card-text">{{pd.Description}}</p>
+     
+    </div>
+   
+  </div>
+   
+  <hr/> 
+      
+      
+      </div>
+    </div>
+    <br/>
+  </body>
+  <router-outlet></router-outlet>
+
+
+  <!-- <div class="row">
+    <div class="column">
+      <img src="img_snow.jpg" alt="Snow" style="width:100%">
+    </div>
+    <div class="column">
+      hello
+    </div>
+    <div class="column">
+      <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
+    </div>
+  </div>
+<img src="https://restaurantdupalaisroyal.com/wp-content/uploads/2020/02/Restaurant_du_Palais_Royal_RDC_11_GdeLaubier.jpg"style="height:150px; width:200px;" /> -->

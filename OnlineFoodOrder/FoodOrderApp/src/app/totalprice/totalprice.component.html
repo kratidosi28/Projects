@@ -1,0 +1,62 @@
+
+  <div>
+    <nav class="navbar navbar-dark bg-dark expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><i>Order!!</i></a>
+      <form class="form-inline">
+   
+   <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Logout</button>&nbsp; 
+  
+  </form>
+     </nav>
+    
+  </div>
+  <body style="background-color: #FFDAB9;">
+ <div class="card" style="width:70%; margin-left:250px; margin-top:50px;">
+ <div class="card-body">
+    <div class="column" style="margin-left: 250px; margin-top: 20px;">
+        <h4  class="card-header" style="text-transform:capitalize;"><i>YOUR ORDER</i></h4> </div><hr/>
+  <div class="row">
+    
+    <div class="column">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ3SRw78LVTrsMS42ZJmkdq0D9B_qcel3jhN00ncKeAhTogPhMn&usqp=CAU"style="height:150px; width:200px;" />
+    </div>
+    <div class="column" style="margin-left: 180px; margin-top: 50px;">
+      <h5  class="card-header" style="text-transform:capitalize;"><i>{{result.FoodName}}</i></h5> </div>
+      
+      <div class="column" style="margin-left: 200px; margin-top: 50px;">
+        <h5  class="card-header" style="text-transform:capitalize;"><i>Rs.{{result.FoodPrice}}</i></h5> </div>
+     
+        <div class="column" style="margin-left: 250px; margin-top: 50px;">
+            <h5  class="card-header" style="text-transform:capitalize;"><i>Qty: {{quantity}}</i></h5> </div>
+   
+  </div>
+   
+  <hr/> 
+  <div class="column" style="margin-left: 250px; margin-top: 50px;">
+    <h5  class="card-header" style="text-transform:capitalize;"><i>Total Price:&nbsp; Rs.{{value}}</i></h5> </div>
+    <div class="column" style="margin-left: 250px; margin-top: 50px;">
+        <a class="btn btn-danger" style="color:white;" routerLink="/payment">Proceed to checkout</a></div>
+
+
+      
+      
+      </div>
+    </div>
+    <br/>
+  </body>
+  <router-outlet></router-outlet>
+
+
+  <!-- <div class="row">
+    <div class="column">
+      <img src="img_snow.jpg" alt="Snow" style="width:100%">
+    </div>
+    <div class="column">
+      hello
+    </div>
+    <div class="column">
+      <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
+    </div>
+  </div>
+<img src="https://restaurantdupalaisroyal.com/wp-content/uploads/2020/02/Restaurant_du_Palais_Royal_RDC_11_GdeLaubier.jpg"style="height:150px; width:200px;" /> -->
+

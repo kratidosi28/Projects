@@ -1,0 +1,36 @@
+<body>
+    <form [formGroup]="SignUpFormGroup">
+      <h4 style="color:#3ba436;">INDIVIDUAL REGISTRATION!!</h4><br/>
+     <div class="row">
+       <label class="col-lg-6">
+        <p class="label-txt">ENTER YOUR FULLNAME</p><br/>
+        <input type="text" class="input" formControlName="FullName">
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+       </label></div>
+       <div class="row">
+       <label class="col-lg-6">
+         <p class="label-txt">ENTER YOUR EMAIL</p><br/>
+        <input type="text" class="input" formControlName="Email">
+        <div class="line-box">
+          <div class="line"></div>
+        </div></label>
+         </div>
+
+         <div class="row">
+            <label class="col-lg-6">
+              <p class="label-txt">ENTER YOUR MOBILE NUMBER</p><br/>
+             <input type="text" class="input" formControlName="MobileNumber">
+             <div class="line-box">
+               <div class="line"></div>
+             </div></label>
+              </div>
+          <button type="submit" (click)="check()">Create Account</button>
+
+          <label>
+          <p class="label-txt">Already have an account??<a routerLink="/login">Login yourself</a></p></label>
+        
+    </form></body>
+    <router-outlet></router-outlet>
+

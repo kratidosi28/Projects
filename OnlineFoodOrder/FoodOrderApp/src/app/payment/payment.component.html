@@ -1,0 +1,64 @@
+<body style="background-color: lightyellow;">
+<div>
+  <nav class="navbar navbar-dark bg-dark expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><i>Order!!</i></a>
+    <form class="form-inline">
+ 
+ <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Logout</button>&nbsp; 
+
+</form>
+   </nav>
+  
+</div>
+
+<form [formGroup]="paymentFormGroup" style="margin-top: 150px; margin-left:100px; width:30%; height:30%;">
+
+  
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+            <i class="fas fa-user-circle"></i>
+          </div>
+        </div>
+        <input name="CardOwnerName" class="form-control"
+          placeholder="Card Owner Name" formControlName="CardOwnerName">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+            <i class="far fa-credit-card"></i>
+          </div>
+        </div>
+        <input name="CardNumber" class="form-control" placeholder="16 Digit Card Number"formControlName="CardNumber">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-7">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text bg-white">
+              <i class="fas fa-calendar-alt"></i>
+            </div>
+          </div>
+          <input name="ExpirationDate" class="form-control" placeholder="MM/YY" formControlName="ExpirationDate">
+        </div>
+      </div>
+      <div class="form-group col-md-5">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text bg-white">
+              <i class="fas fa-key"></i>
+            </div>
+          </div>
+          <input type="password" name="CVV" class="form-control" placeholder="CVV" formControlName="CVV">
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-success btn-lg btn-block" (click)="check()" type="submit" [disabled]="paymentFormGroup.invalid"><i class="fas fa-database"></i> Submit</button>
+    </div>
+  </form>
+</body>

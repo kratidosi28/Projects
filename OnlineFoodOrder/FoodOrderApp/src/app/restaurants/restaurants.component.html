@@ -1,0 +1,57 @@
+
+  <div>
+    <nav class="navbar navbar-dark bg-dark expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><i>Restaurants!!</i></a>
+      <form class="form-inline">
+   <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#9906;   Search Restaurant">&nbsp;&nbsp;  
+   <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Signup</button>&nbsp; 
+   <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Signin</button>
+  </form>
+     </nav>
+    
+  </div>
+  <body style="background-color: aquamarine;">
+ <div class="card" style="width:50%; margin-left:250px; margin-top:50px;">
+ <div class="card-body" *ngFor="let pd of result | filter:searchText">
+    
+  <div class="row">
+    <div class="column">
+      <img src="https://restaurantdupalaisroyal.com/wp-content/uploads/2020/02/Restaurant_du_Palais_Royal_RDC_11_GdeLaubier.jpg"style="height:150px; width:200px;" />
+    </div>
+    <div class="column">
+      <h5  class="card-header" style="text-transform:capitalize;"><i>{{pd.RestaurantName}}</i></h5> 
+      <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+
+      <p class="card-text">{{pd.RestaurantDefinition}}</p>
+      <p class="card-text">{{pd.RestaurantLocation}}</p>
+      <a class="btn btn-primary" [routerLink]="['/food-categories/', pd.RestaurantId]">View Menu</a> 
+    </div>
+   
+  </div>
+   
+  <hr/> 
+      
+      
+      </div>
+    </div>
+    <br/>
+  </body>
+  <router-outlet></router-outlet>
+
+
+  <!-- <div class="row">
+    <div class="column">
+      <img src="img_snow.jpg" alt="Snow" style="width:100%">
+    </div>
+    <div class="column">
+      hello
+    </div>
+    <div class="column">
+      <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
+    </div>
+  </div>
+<img src="https://restaurantdupalaisroyal.com/wp-content/uploads/2020/02/Restaurant_du_Palais_Royal_RDC_11_GdeLaubier.jpg"style="height:150px; width:200px;" /> -->
