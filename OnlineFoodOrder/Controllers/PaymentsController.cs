@@ -23,17 +23,17 @@ namespace OnlineFoodOrder.Controllers
 
         // GET: api/Payments
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Payment>>> Getpayments()
+        public async Task<ActionResult<IEnumerable<Payment>>> GetPayment()
         {
-            return await _context.payments.ToListAsync();
+            return await _context.Payment.ToListAsync();
         }
 
         // GET: api/Payments/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Payment>> GetPayment(int id)
         {
-            var payment = await _context.payments.FindAsync(id);
-
+            var payment = await _context.Payment.FindAsync(id);
+           
             if (payment == null)
             {
                 return NotFound();
@@ -48,7 +48,7 @@ namespace OnlineFoodOrder.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPayment(int id, Payment payment)
         {
-            if (id != payment.PMId)
+            if (id != payment.Pmid)
             {
                 return BadRequest();
             }
@@ -80,23 +80,23 @@ namespace OnlineFoodOrder.Controllers
         [HttpPost]
         public async Task<ActionResult<Payment>> PostPayment(Payment payment)
         {
-            _context.payments.Add(payment);
+            _context.Payment.Add(payment);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetPayment", new { id = payment.PMId }, payment);
+            return CreatedAtAction("GetPayment", new { id = payment.Pmid}, payment);
         }
 
         // DELETE: api/Payments/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Payment>> DeletePayment(int id)
         {
-            var payment = await _context.payments.FindAsync(id);
+            var payment = await _context.Payment.FindAsync(id);
             if (payment == null)
             {
                 return NotFound();
             }
 
-            _context.payments.Remove(payment);
+            _context.Payment.Remove(payment);
             await _context.SaveChangesAsync();
 
             return payment;
@@ -104,7 +104,7 @@ namespace OnlineFoodOrder.Controllers
 
         private bool PaymentExists(int id)
         {
-            return _context.payments.Any(e => e.PMId == id);
+            return _context.Payment.Any(e => e.Pmid == id);
         }
     }
 }

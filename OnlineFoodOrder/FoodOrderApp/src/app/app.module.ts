@@ -14,6 +14,8 @@ import { FoodlistComponent } from './foodlist/foodlist.component';
 import { QuantitiesComponent } from './quantities/quantities.component';
 import { TotalpriceComponent } from './totalprice/totalprice.component';
 import { PaymentComponent } from './payment/payment.component';
+import { OrdersComponent } from './orders/orders.component';
+// import { ListoffoodComponent } from './listoffood/listoffood.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { PaymentComponent } from './payment/payment.component';
     FoodlistComponent,
     QuantitiesComponent,
     TotalpriceComponent,
-    PaymentComponent
+    PaymentComponent,
+    OrdersComponent,
+    //ListoffoodComponent
   ],
   imports: [
     BrowserModule,

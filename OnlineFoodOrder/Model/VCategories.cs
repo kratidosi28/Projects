@@ -12,7 +12,7 @@ namespace OnlineFoodOrder.Model
        
         [StringLength(50)]
         public string FoodCategoryName { get; set; }
-
+        
         [Key]
         public int FoodItemId { get; set; }
         [StringLength(50)]

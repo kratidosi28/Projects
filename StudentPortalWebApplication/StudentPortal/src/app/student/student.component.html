@@ -1,0 +1,45 @@
+  <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+     <input type = "hidden" name ="EnrollmentNumber">
+    <div class="form-group">
+    <input name ="StudentFirstName" #StudentFirstName="ngModel" [(ngModel)]="service.formData.StudentFirstName" class="form-control">
+    </div>
+    <div class="form-group">
+        <input name ="StudentLastName" #StudentLastName="ngModel" [(ngModel)]="service.formData.StudentLastName" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <input name ="StudentAge" #StudentAge="ngModel" [(ngModel)]="service.formData.StudentAge" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <input name ="StudentAddress" #StudentAddress="ngModel" [(ngModel)]="service.formData.StudentAddress" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <input name ="StudentEmailId" #StudentEmailId="ngModel" [(ngModel)]="service.formData.StudentEmailId" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <input name ="StudentMobileNumber" #StudentMobileNumber="ngModel" [(ngModel)]="service.formData.StudentMobileNumber" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <input name ="CourseSpecializationId" #CourseSpecializationId="ngModel" [(ngModel)]="service.formData.CourseSpecializationId" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <input name ="AcademicYear" #AcademicYear="ngModel" [(ngModel)]="service.formData.AcademicYear" class="form-control">
+                                </div>
+
+                                <button type=submit>submit</button>
+
+                            
+</form>
+<router-outlet></router-outlet>
+   
+
+
+
+   
+   
+ 

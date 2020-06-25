@@ -8,6 +8,7 @@ import { FoodlistComponent } from './foodlist/foodlist.component';
 import { QuantitiesComponent } from './quantities/quantities.component';
 import { TotalpriceComponent } from './totalprice/totalprice.component';
 import { PaymentComponent } from './payment/payment.component';
+import { ListoffoodComponent } from './listoffood/listoffood.component';
 
 const APP_ROUTES:Routes=[{
     path:'signup',component: SignupComponent
@@ -18,7 +19,7 @@ const APP_ROUTES:Routes=[{
 },{
   path:'',component: RestaurantsComponent
 },{
-  path:'foodlist/:id',component: FoodlistComponent
+  path:'foodlist/:id',component:FoodlistComponent 
 },{
   path:'quantities',component: QuantitiesComponent
 },{

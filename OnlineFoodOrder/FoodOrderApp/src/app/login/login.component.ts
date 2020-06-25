@@ -12,7 +12,8 @@ export class LoginComponent implements OnInit {
 
   customerLoginFormGroup: FormGroup;
   result: any;
-  id : number;
+  id : any;
+  value;
 
   readonly rootURL = 'https://localhost:44351/api';
  constructor(private formBuilder:FormBuilder,private httpService: HttpClient,private router:Router) { }
@@ -24,20 +25,23 @@ export class LoginComponent implements OnInit {
     });
   }
   check(){
-    if(localStorage.getItem('user')){
-     this.router.navigate([localStorage.getItem('url')]);
-    }
-    else{
-    this.httpService.post(this.rootURL+'/Login',{Email:this.customerLoginFormGroup.value.Email}).subscribe(res=>{
+    if(localStorage.getItem('id')){
+     alert("you successfully logged in");
+    } else{
+   this.httpService.post(this.rootURL+'/Login',{Email:this.customerLoginFormGroup.value.Email}).subscribe(res=>{
         this.result=res;
-         //localStorage.setItem("token",JSON.stringify(this.result));
-         console.log(this.result);
-        alert("you successfully logged in");
-        //  this.router.navigate(['/search-product']);
-        localStorage.setItem('user',this.result); 
+       console.log(this.result);
+       localStorage.setItem('id', this.result.RegistrationId);
+        //alert("you successfully logged in");
+        this.value = localStorage.getItem('url');
+        this.id = localStorage.getItem('catid');
+        this.router.navigate(['/foodlist/', this.id])
+   });
+      
+    }
       }
         
-    );}
+    
   }
 
-}
+

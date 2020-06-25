@@ -8596,11 +8596,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\guru kripa\\source\\repos\\OnlineFoodOrder\\OnlineFoodOrder.csproj",
+      "projectUniqueName": "C:\\Users\\guru kripa\\source\\repos\\Projects\\OnlineFoodOrder\\OnlineFoodOrder.csproj",
       "projectName": "OnlineFoodOrder",
-      "projectPath": "C:\\Users\\guru kripa\\source\\repos\\OnlineFoodOrder\\OnlineFoodOrder.csproj",
+      "projectPath": "C:\\Users\\guru kripa\\source\\repos\\Projects\\OnlineFoodOrder\\OnlineFoodOrder.csproj",
       "packagesPath": "C:\\Users\\guru kripa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\guru kripa\\source\\repos\\OnlineFoodOrder\\obj\\",
+      "outputPath": "C:\\Users\\guru kripa\\source\\repos\\Projects\\OnlineFoodOrder\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\guru kripa\\AppData\\Roaming\\NuGet\\NuGet.Config",

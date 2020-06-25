@@ -1,0 +1,96 @@
+<body>
+    <form [formGroup]="customerProfileFormGroup">
+      <h4 style="color:#3ba436;">CUSTOMER REGISTRATION FORM!!</h4><br/>
+     <div class="row">
+       <label class="col-lg-6">
+        <p class="label-txt">ENTER YOUR FIRSTNAME</p>
+        <input type="text" class="input" formControlName="FirstName">
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+       </label>
+       <label class="col-lg-6">
+         <p class="label-txt">ENTER YOUR LASTNAME</p>
+        <input type="text" class="input" formControlName="LastName">
+        <div class="line-box">
+          <div class="line"></div>
+        </div></label>
+         </div>
+    <div class="row">
+      <label class="col-lg-12">
+        <p class="label-txt">ENTER YOUR EMAIL</p>
+        <input type="text" value={{email}} readonly>
+
+    <div class="line-box">
+          <div class="line"></div>
+        </div>
+      </label>
+    </div>
+    <div class="row">
+        <label class="col-lg-6">
+         <p class="label-txt">ENTER YOUR PASSWORD</p>
+         <input type="text" class="input" formControlName="Password">
+         <div class="line-box">
+           <div class="line"></div>
+         </div>
+        </label>
+        <label class="col-lg-6">
+          <p class="label-txt">ENTER YOUR CONFIRM PASSWORD</p>
+         <input type="text" class="input" formControlName="ConfirmPassword">
+         <div class="line-box">
+           <div class="line"></div>
+         </div></label>
+          </div>
+    
+    
+     <div class="row">
+        <label class="col-lg-12">
+           <p class="label-txt">ENTER YOUR MOBILENUMBER</p>
+           <input type="text" class="input" formControlName="MobileNumber">
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+        </label>
+     </div>
+        
+       <div class="row">
+            <label class="col-lg-12">
+                <p class="label-txt">GENDER</p>
+                  <select class="input" formControlName="Gender">
+                  <option disabled="true">Gender</option>
+                    <option>Female</option>
+                    <option>Male</option>
+        </select>
+        
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+      </label>
+     </div> 
+    
+     <div class="row">
+      <label class="col-lg-12">
+    
+        <p class="label-txt">ENTER YOUR ADDRESS</p>
+        <input type="text" class="input" formControlName="Address">
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+      </label></div>
+
+      <div class="row">
+        <label class="col-lg-12">
+      
+          <p class="label-txt">ENTER YOUR DATE OF BIRTH</p>
+          <input type="text" class="input" formControlName="Dob">
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+        </label></div>
+      <br/>
+     
+      <button type="submit" (click)="Update()">submit</button>
+    </form>
+    
+    </body>
+    <router-outlet></router-outlet>

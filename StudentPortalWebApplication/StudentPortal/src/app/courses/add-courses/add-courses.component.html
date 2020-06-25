@@ -1,0 +1,10 @@
+
+  <form #form="ngForm" (submit)="onSubmit(form)">
+    <input type="hidden" name="CourseId" [(ngModel)]="courseService.formData.CourseId">
+   <div class="form-group">
+   <input name ="CourseName"  #CourseName="ngModel" [(ngModel)]="courseService.formData.CourseName" class="form-control">
+   </div>
+   <button type="submit">Save
+</button>
+ </form>
+ <router-outlet></router-outlet>

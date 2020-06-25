@@ -8,16 +8,24 @@ namespace OnlineFoodOrder.Model
     [Table("signup")]
     public partial class Signup
     {
+        public Signup()
+        {
+            Orders = new HashSet<Orders>();
+        }
+
         [Key]
         public int RegistrationId { get; set; }
-        [Required]
+      
         [StringLength(50)]
         public string FullName { get; set; }
-        [Required]
+      
         [StringLength(50)]
         public string Email { get; set; }
-        [Required]
+        
         [StringLength(50)]
         public string MobileNumber { get; set; }
+
+        [InverseProperty("Registration")]
+        public virtual ICollection<Orders> Orders { get; set; }
     }
 }

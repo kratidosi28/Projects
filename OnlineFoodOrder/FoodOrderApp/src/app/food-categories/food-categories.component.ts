@@ -34,4 +34,11 @@ export class FoodCategoriesComponent implements OnInit {
   });
 
   }
+
+  Add(id : Number){
+    localStorage.setItem('catid',this.id);
+    console.log(this.id);
+    this.router.navigate(['/foodlist/', this.id])
+
+  }
 }

@@ -27,8 +27,13 @@
     <div class="column">
       <img src="https://i.pinimg.com/originals/ce/85/68/ce8568b8d13aa3cbcd3ec519229f42e0.jpg" style="height:150px; width:200px;" />
     </div>
-    <div class="column">
+    <!-- <div class="column">
       <h5  class="card-header" style="text-transform:capitalize;"><i><a [routerLink]="['/foodlist/', pd.FoodCategoryId]">{{pd.FoodCategoryName}}</a></i></h5><br/>
+      <p class="card-text">{{pd.Description}}</p>
+     
+    </div> -->
+    <div class="column">
+      <h5  class="card-header" style="text-transform:capitalize;"><i><a (click)="Add(pd.FoodCategoryId)">{{pd.FoodCategoryName}}</a></i></h5><br/>
       <p class="card-text">{{pd.Description}}</p>
      
     </div>

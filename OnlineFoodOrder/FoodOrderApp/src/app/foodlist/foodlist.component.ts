@@ -35,13 +35,14 @@ export class FoodlistComponent implements OnInit {
   }
 
   Add(id: any){
-    if(localStorage.getItem('user')){
+    if(localStorage.getItem('id')){
       localStorage.setItem('token', id);
       console.log(id);
       this.router.navigate(['/quantities']);
-    }
-    else{
-      localStorage.setItem('url',this.rootURL+'/FoodLists')
+   }
+   else{
+     this.data = this.rootURL+'/FoodLists'
+      localStorage.setItem('url',this.data);
       this.router.navigate(['/login'])
     }
    

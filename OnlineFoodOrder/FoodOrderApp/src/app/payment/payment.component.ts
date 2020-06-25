@@ -12,9 +12,12 @@ export class PaymentComponent implements OnInit {
 
   paymentFormGroup: FormGroup;
   result: any;
-  id : number;
+  id;
+  token;
+  value;
 
   readonly rootURL = 'https://localhost:44351/api';
+  data: Object;
  constructor(private formBuilder:FormBuilder,private httpService: HttpClient,private router:Router) { }
 
   ngOnInit(): void {
@@ -27,15 +30,29 @@ export class PaymentComponent implements OnInit {
     })
   }
   check(){
-    alert("your order is successfully booked");
+    
     this.httpService.post(this.rootURL+'/Payments',{CardOwnerName:this.paymentFormGroup.value.CardOwnerName, CardNumber:this.paymentFormGroup.value.CardNumber,
     ExpirationDate:this.paymentFormGroup.value.ExpirationDate, CVV:this.paymentFormGroup.value.CVV}).subscribe(res=>{
         this.result=res;
-        console.log(this.result);
+        console.log(this.result); 
+      });
+
+     this.token = localStorage.getItem('token');
+     this.value = localStorage.getItem('id');
+     console.log(this.value);
+        
+
+     this.httpService.post(this.rootURL+'/Orders',{RegistrationId:this.value, FoodId: this.token}).subscribe(res =>{
+      this.data = res;
+      console.log(this.data);
+  });
+        
+   
+        alert("your order is successfully booked");
       
      
         
-    });
+    
   }
 
-}
+  }

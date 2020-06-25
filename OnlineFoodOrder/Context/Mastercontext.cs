@@ -20,10 +20,12 @@ namespace OnlineFoodOrder.Context
 
         public virtual DbSet<FoodList> FoodList { get; set; }
 
-            public DbSet<Payment> payments { get; set; }
+            public virtual DbSet<Payment> Payment { get; set; }
         public DbSet<Quantities> quantities { get; set; }
 
              public DbSet<Signup> signups { get; set; }
+
+       public virtual DbSet<Orders> Orders { get; set; }
 
         public DbSet<FoodItems> FoodItems { get; set; }
         public DbSet<VFoodList> VFoodList { get; set; }

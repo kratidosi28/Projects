@@ -1,0 +1,11 @@
+<table class="table table-hover">
+
+    <tr *ngFor ="let pd of service.list">
+        <td>{{pd.CourseId}}</td>
+        <td>{{pd.CourseName}}</td>
+      
+         <td><button type ="submit" (click)="onDelete(pd.CourseId)">delete</button></td> 
+       
+    </tr>
+   </table>
+   <router-outlet></router-outlet>

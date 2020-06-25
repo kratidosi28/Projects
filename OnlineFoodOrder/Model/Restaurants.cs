@@ -1,6 +1,4 @@
-﻿
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -25,6 +23,8 @@ namespace OnlineFoodOrder.Model
         [Required]
         [StringLength(50)]
         public string OpenTime { get; set; }
+        [Column("img")]
+        public byte[] Img { get; set; }
 
         [InverseProperty("Restaurant")]
         public virtual ICollection<FoodItems> FoodItems { get; set; }

@@ -1,0 +1,16 @@
+<table class="table table-hover">
+    <tr>
+        <td>CourseId</td>&nbsp;&nbsp;&nbsp;&nbsp;
+        <td>CourseName</td>  
+    </tr>
+
+    <tr *ngFor ="let pd of service.list">
+
+        <td>{{pd.CourseId}}</td>&nbsp;&nbsp;&nbsp;&nbsp;
+        <td>{{pd.CourseName}}</td><br/>
+        
+        
+       
+    </tr>
+   </table>
+   <router-outlet></router-outlet>
